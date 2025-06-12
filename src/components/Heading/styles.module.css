@@ -1,0 +1,43 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  
+    width: 100%;
+   
+}
+
+.heading > h1 {
+    font-size: 1.2rem;
+    color: var(--clr-neutral-900);
+    padding: 0;
+    margin: 0;
+    
+}
+
+.heading > button {
+    border: none;
+    background-color: inherit;
+    color: var(--clr-neutral-500);
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+
+    .heading {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .heading > button {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        display: block;
+        /* border: 1px solid red; */
+    }    
+}

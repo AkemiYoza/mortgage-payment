@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    /* ### Primary */
+
+    --clr-primary: hsl(61, 70%, 52%);
+    --clr-primary-light: hsla(61, 70%, 90%);
+    --clr-secondary: hsl(4, 69%, 50%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --clr-neutral-100: hsl(202, 86%, 94%);
+    --clr-neutral-300: hsl(203, 41%, 72%);
+    --clr-neutral-500: hsl(200, 26%, 54%);
+    --clr-neutral-700: hsl(200, 24%, 40%);
+    --clr-neutral-900: hsl(202, 55%, 16%);
+    --clr-neutral-900-dark: hsl(202, 55%, 13%);
+
+    --ff: "Plus Jakarta Sans", sans-serif;
+    --fw-regular: 500;
+    --fw-bold: 700
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin-inline: 1rem;
+    font-family: var(--ff);
+    background-color: var(--clr-neutral-100);
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    /* padding: 1rem; */
+    border-radius: 0.8rem;
+    background-color: var(--white);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 1px 2px 20px var(--clr-neutral-900);
+}
+
+.mortgageBox {
+    background-color: var(--white);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    padding: 2rem;
+    color: var(--clr-neutral-700);
+    width: 100%;
+    
+}
+
+.resultBox {
+    background-color: var(--clr-neutral-900);
+    border-radius: 0 0.8rem 0.8rem 4rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: block;
+        
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        box-shadow: none;
+        border-radius: none;
+        
+    }
+    .mortgageBox {
+        border-radius: 0;
+        height: 100%;
+
+    }
+    .resultBox {
+        border-radius: 0;
+        flex: 1;
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

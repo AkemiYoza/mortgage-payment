@@ -1,0 +1,43 @@
+.resultScreen {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: var(--white);
+    
+}
+
+p {
+    font-size: 0.8rem;
+    color: var(--clr-neutral-300);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.result {
+    width: 100%;
+    background-color: var(--clr-neutral-900-dark);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    box-shadow: 0px -3px var(--clr-primary);
+    margin-top: 1.5rem;
+}
+
+.monthlyRepay {
+    font-size: 3rem;
+    color: var(--clr-primary);
+    font-weight: var(--fw-bold);
+    border-bottom: 2px solid var(--clr-neutral-900);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.totalResult {
+    margin-top: 0.5rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+}

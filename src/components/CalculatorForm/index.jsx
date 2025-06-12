@@ -1,34 +1,63 @@
-import { CalculatorIcon } from 'lucide-react'
-import styles from './styles.module.css'
-
-
+import { CalculatorIcon, DollarSignIcon, EuroIcon } from "lucide-react";
+import styles from "./styles.module.css";
 
 export function CalculatorForm() {
-    return (
+  return (
+    <>
         <form action="">
-            <label htmlFor="mortgage-amount">Mortgage Amount</label>
-            <input type="number" />
+      <label htmlFor="mortgage-amount">Mortgage Amount</label>
 
-            <div className={styles.parameters}>
-                <label htmlFor="mortgage-term">Mortgage Term</label>
-                <input type="number" />
+      <div className={styles.inputBox}>
+        <div className={styles.icon}>
+          <DollarSignIcon />
+        </div>
+        <input className={styles.input} type="number" id="mortgage-amount" required />
+      </div>
 
-                <label htmlFor="interest-rate">Interest Rate</label>
-                <input type="number" />
-            </div>
+      <div className={styles.parameters}>
+        <div>
+          <label htmlFor="mortgage-term">Mortgage Term</label>
+          <div className={styles.inputBox}>
+            <input className={styles.input} type="number" id="mortgage-term" required />
+            <span className={styles.icon}>years</span>
+          </div>
+        </div>
 
-            <div className={styles.mortgageType}>
-                <input id="repayment" type="radio" name='type' value="repayment" />
-                <label htmlFor="repayment">Repayment</label>
+        <div>
+          <label htmlFor="interest-rate">Interest Rate</label>
+          <div className={styles.inputBox}>
+            <input className={styles.input} type="number" id="interest-rate" required />
+            <span className={styles.icon}>%</span>
+          </div>
+        </div>
+      </div>
 
-                <input id="interest" type="radio" name='type' value="interest" />
-                <label htmlFor="interest">Interest Only</label>
-            </div>
+      <div className={styles.mortgageType}>
+        <p>Mortgage Type</p>
+       
+        <label className={styles.radioContainer} htmlFor="repayment">  
+            <input  id="repayment" type="radio" name="type" value="repayment" />
+            <span className={styles.radioCustom}></span>
+            Repayment
+        </label>
+    
+    
+        <label className={styles.radioContainer} htmlFor="interest">
+            <input  id="interest" type="radio" name="type" value="interest" />
+            <span className={styles.radioCustom}></span>
+            Interest Only
+        </label>
+        
 
-            <button>
-                <CalculatorIcon />
-                Calculate Repayments
-            </button>
-        </form>
-    )
+        
+      </div>
+
+    </form>
+    <button>
+        <CalculatorIcon />
+        Calculate Repayments
+      </button>
+    </>
+    
+  );
 }
